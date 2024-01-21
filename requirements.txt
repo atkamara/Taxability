@@ -135,3 +135,4 @@ wheel==0.42.0
 widgetsnbextension==4.0.9
 xgboost==2.0.3
 xyzservices==2023.10.1
+tables==3.9.2
