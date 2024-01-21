@@ -2,7 +2,7 @@
 Taxable income analysis
 ==========================
 
-# Exploratory and predictive analyses
+# Exploratory and predictive analysis
 
 This project aims at drawing insightful knowledge from income dataset on over 12,000 clients responding to a variety of questions about their work activities, gender, origins and so on. We'll be using  various statistical and machine learning techniques throughout this project to  get the most out of our data.
 
@@ -36,10 +36,16 @@ $ virtualenv -p python3 mlenv
 ***Note that we are using python3 in this project***
 	
 Now you can activate your virtual environment after that the necessary files have been properly installed. Run this command and you should see between brackets (mlenv) at the begining of your shell prompt:
+
+for windows: 
+
 ```bash
-$ . mlenv/bin/activate
+$ . mlenv/Scripts/activate
 ```
-or
+On windows 11, you may run into restriction issues. if so, you have to allow sript execution by using the following command(at your own risk) ```$ Set-ExecutionPolicy Unrestricted```
+
+Linux, Mac: 
+
 ```bash
 $ source mlenv/bin/activate
 ```
