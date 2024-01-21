@@ -6,8 +6,7 @@ Taxable income analysis
 
 This project aims at drawing insightful knowledge from income dataset on over 12,000 clients responding to a variety of questions about their work activities, gender, origins and so on. We'll be using  various statistical and machine learning techniques throughout this project to  get the most out of our data.
 
-<img src="https://www.divorcingoptions.com/Blog/wp-content/uploads/2020/01/income.jpg" title="book" width="150" />
-
+<a href="https://ibb.co/hmpsJ30"><img src="https://i.ibb.co/LZ4SXVK/Income-Tax-for-Foreigners.jpg" alt="Income-Tax-for-Foreigners" border="0"></a>
 
 
 ## Quick Start
