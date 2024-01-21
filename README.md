@@ -49,6 +49,11 @@ Linux, Mac:
 ```bash
 $ source mlenv/bin/activate
 ```
+or
+```bash
+$ . mlenv/bin/activate
+```
+
 ***⚠Do not miss the dot ( . ) at begining of the first command***
 
 ### Install python libraries
