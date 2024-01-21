@@ -14,9 +14,11 @@ This project aims at drawing insightful knowledge from income dataset on over 12
 
 ### Setting up your work environment(⚠ tested on windows 11 pro)
 
-You can pull the code directly from this public repository or download and extract it from this [link](https://codeload.github.com/atkamara/processdatabeez/zip/refs/heads/main)
+You can download the project and run it locally on your computer by either pulling this repository or download it from this [link](https://codeload.github.com/atkamara/processdatabeez/zip/refs/heads/main)
+. You will need to extract the zipped file on you working directory.
+
 ```bash
-    $ git clone https://github.com/ageron/handson-ml2.git
+    $ git clone https://github.com/atkamara/processdatabeez.git
 ```    
 You should get the following project structure displayed on your favorite IDE(I'm using sublime text by the way): 
 
