@@ -22,9 +22,9 @@ You should get the following project structure displayed on your favorite IDE(I'
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/G7mrymY/Screenshot-2024-01-21-191908.png" alt="Screenshot-2024-01-21-191908" border="0"></a>
 
-### Create a virtual environment :
+### Creating a virtual environment :
 
-This part is optional but highly recommended if you want to avoid version issues. Virtual environments are very useful tools, especially for data science as we collaborate a lot on a daily basis and we share codes from time to time. Setting up a virtual environment will help you make sure you can reproduce your experiments on any computer. For the purpose of this tutorial, we will be using the **virtualenv** library available on **pypi** and that you can easily download using **pip** command . Here are instructions( if you don't have it already) to follow: 
+This part is optional but highly recommended if you want to avoid version issues. Virtual environments are very useful tools, especially for data science as we collaborate a lot on a daily basis and we share codes from time to time. Setting up a virtual environment will help you make sure you can reproduce your experiments on any computer. For the purpose of this tutorial, we will be using the **virtualenv** library available on **pypi** and that you can easily download using **pip** command . Here are the instructions( if you don't have it already) to follow: 
 
 ```bash
 $  pip install virtualenv
@@ -68,18 +68,18 @@ The notebook **taxability.ipynb** will walk you through different kinds of analy
 * **Error Analysis**
 
 The two first sections are focused on preparing your data for analysis. It deals with missing values, preliminary data preparations and checks for irrelevant data to make focus on features that will provide you with useful information on income taxability.
-The third section **Getting insights from clients distributions** is a very large section that will analyze distributions on time and geographic scopes and will lay emphasis a little on pertinent qualitative variables.
-The section on **Clustering clients**, uses various machine learning techniques to get insights from data. In terms of methodology, we found it more convinient on python to seperate data into qualitative and quantitative sets. Unfortunately, we are unaware of implementations of algorithms like [FAMD](https://rdrr.io/cran/FactoMineR/man/FAMD.html) which are only available of R software. Thus you will find in this section:
+The third section (**Getting insights from clients distributions**) is a very large section that will analyze distributions on time and geographic scopes and will lay emphasis a little on pertinent qualitative variables.
+The section on (**Clustering clients**), uses various machine learning techniques to get insights from data. In terms of methodology, we found it more convinient on **Python** to seperate data into qualitative and quantitative sets. We are unfortunately unaware of implementations of algorithms that would deal with both qualitative and quantitative measures like [FAMD](https://rdrr.io/cran/FactoMineR/man/FAMD.html) which is only available on R software. Thus you will find in this section:
 *  Dimensionality reduction(Pincipal component analysis, stochastic neighbour embedding(tSNE)) for quantitative variables like wage, capital gains and losses or year
 * Clustering using k-means, DBscan on quantitative data
 * Hierarchical agglomerative classification(HAC) on qualitative data using Jaccard index
 * Clusters Labelling : we give names to our cluster based on more relevant variables
 
 
-Finally, we dive into the most interesting part which is learning on data to predict the fact of not declaring taxable income. Since our sample data is unbalance, accuracy is less relevant than statistical measures like specificity. That's why we came up with an evaluation strategy which favors specificity over accuracy defined as follows :
+Finally, we dive into the most interesting part which is learning on data to predict the fact of not declaring taxable income. Since our sample data is unbalanced, accuracy is less relevant than statistical measures like specificity. That's why we came up with an evaluation strategy which favors specificity over accuracy defined as follows :
 $$\gamma=\frac{1}{3}accuracy+\frac{2}{3}specificity$$
 
-We have save all models in the **model/** directory with the pickle extension(**.pkl**) so that we will be able to reuse them at any time for prediction. 
+We have saved all our models in the **model/** directory with the pickle extension(**.pkl**) so that we will be able to reuse them at any time for prediction. 
 Our final pipeline for both feature engineering and prediction looks like this:
 
 
