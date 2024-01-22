@@ -130,6 +130,18 @@ Once you have installed docker, you can now move to project folder where the Doc
 $ docker build -t income_image .
 ```
 
+When the process is done, you can check if the image is correctly listed:
+```bash
+$ docker images
+```
+
+Now you can start a new container to run the experiment
+```bash
+$ docker run --name income_container -p 8888:8888 income_image
+```
+
+You can now visit the localhost link displayed on the terminal with your access token
+
 
 # FAQ
 

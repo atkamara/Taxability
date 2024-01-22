@@ -2,7 +2,7 @@ FROM python:3
 
 WORKDIR /usr/src/workdir
 
-COPY requirements.txt ./
+COPY . ./
 
 RUN pip install --upgrade pip
 
