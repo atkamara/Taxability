@@ -98,9 +98,12 @@ The notebook **taxability.ipynb** will walk you through different kinds of analy
 * **Predicting non-taxability**
 * **Error Analysis**
 
-The two first sections are focused on preparing your data for analysis. It deals with missing values, preliminary data preparations and checks for irrelevant data to make focus on features that will provide you with useful information on income taxability.
-The third section (**Getting insights from clients distributions**) is a very large section that will analyze distributions on time and geographic scopes and will lay emphasis a little on pertinent qualitative variables.
-The section on (**Clustering clients**), uses various machine learning techniques to get insights from data. In terms of methodology, we found it more convinient on **Python** to seperate data into qualitative and quantitative sets. We are unfortunately unaware of implementations of algorithms that would deal with both qualitative and quantitative measures like [FAMD](https://rdrr.io/cran/FactoMineR/man/FAMD.html) which is only available on R software. Thus you will find in this section:
+The two first sections are focused on preparing your data for analysis. They deal with missing values, preliminary data preparations and check for irrelevant data and choose the right features that can provide us with useful information about income taxability.
+
+The third section (**Getting insights from clients distributions**) is a very large one. It analyzes distributions on time and geographic scopes and will lays emphasis on pertinent qualitative variables.
+
+The section on (**Clustering clients**), uses various machine learning techniques to get insights from data. In terms of methodology, we found it more convinient on **Python** to seperate data into qualitative and quantitative sets. We are unfortunately unaware of implementations of algorithms that can deal with both qualitative and quantitative measures like [FAMD](https://rdrr.io/cran/FactoMineR/man/FAMD.html) which is only available on R software. Thus you will find in this section:
+
 *  Dimensionality reduction(Pincipal component analysis, stochastic neighbour embedding(tSNE)) for quantitative variables like wage, capital gains and losses or year
 * Clustering using k-means, DBscan on quantitative data : you can preview clusters online at this [link](https://projector.tensorflow.org/?config=https://gist.githubusercontent.com/atkamara/af578844509b0402135f635734a1fbe9/raw/b5d93e71c4fcc25d41b3cb2b3d66410ea0d886a1/beez_config.json), you can enable cluster coloring by labels just as in picture below. On right panel you can compute distances between clients to see how close they are individually.
 <a href="https://ibb.co/wybsB44"><img src="https://i.ibb.co/b1yJQXX/clust.png" alt="clust" border="0"></a><br /><br />
@@ -109,22 +112,23 @@ The section on (**Clustering clients**), uses various machine learning technique
 * Clusters Labelling : we give names to our cluster based on more relevant variables
 
 
-Finally, we dive into the most interesting part which is learning on data to predict the fact of not declaring taxable income. Since our sample data is unbalanced, accuracy is less relevant than statistical measures like specificity. That's why we came up with an evaluation strategy which favors specificity over accuracy defined as follows :
+Finally, we dive into the most interesting part which is learning on data to predict the fact of not declaring taxable income. Since our sample data is unbalanced, accuracy is less relevant than statistical measures like specificity. That's why we came up with an evaluation strategy which favors specificity over accuracy defined as follows:
 $$\gamma=\frac{1}{3}accuracy+\frac{2}{3}specificity$$
 
-We have saved all our models in the **model/** directory with the pickle extension(**.pkl**) so that we will be able to reuse them at any time for prediction. 
+We have saved all our models in the **model/** directory with the pickle extension(**.pkl**) so that we will be able to reuse them at any time for predictions. 
+
 Our final pipeline for both feature engineering and prediction looks like this:
 
 <a href="https://ibb.co/HGXRyPg"><img src="https://i.ibb.co/p4nNTKX/model.png" alt="model" border="0"></a>
 
-In the final section on (**Error Analysis**) we challenge our model with new unseen data in order to evaluate our **generalization error**
+In the final section on (**Error Analysis**) we challenge our model on new unseen data in order to have a good grasp of our **generalization error**
 
 # Running this project using python image for Docker
 ## Prerequisites
 
-Follow the instructions on [Install Docker](https://docs.docker.com/engine/installation/)  in order to install docker container management system on your device or server. Check out also [Docker Desktop](https://www.docker.com/products/docker-desktop/) software which is also a very convinient tool I highly recommend to help you manage your containers with runtime statistics and easy management services
+Follow the instructions on [Install Docker](https://docs.docker.com/engine/installation/)  in order to install docker container management system on your device or server. Check out also [Docker Desktop](https://www.docker.com/products/docker-desktop/) software which is a very convinient tool that I highly recommend to help you manage your containers.
 
-Once you have installed docker, you can now move to project folder where the Dockerfile is located and run the following command to build your image :
+Once you have installed docker, you can now move to the project folder where the Dockerfile is located and run the following command to build your image:
 
 ```bash
 $ docker build -t income_image .
@@ -140,8 +144,8 @@ Now you can start a new container to run the experiment
 $ docker run --name income_container -p 8888:8888 income_image
 ```
 
-You can now visit the localhost link displayed on the terminal with your access token
-You may want to add ```-v``` tag to your run command to persist data in a volume that you're local device will have in common with the container
+You can now visit the localhost link displayed on the terminal
+**Note** you can add the ```-v```  to persist your data in a volume that you're local device will have in common with the container
 
 # FAQ
 
