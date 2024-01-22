@@ -10,7 +10,7 @@ RUN pip install virtualenv
 
 RUN virtualenv mlenv && . mlenv/bin/activate
 
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt --progress-bar off
 
 
 CMD [ "jupyter",\

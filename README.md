@@ -1,18 +1,26 @@
 
 
+
 Taxable income analysis
 ==========================
+<a href="https://ibb.co/hmpsJ30"><img src="https://i.ibb.co/LZ4SXVK/Income-Tax-for-Foreigners.jpg" alt="Income-Tax-for-Foreigners" border="0"></a>
 
-# Exploratory and predictive analysis
+# Exploratory and predictive experiments
 
 This project aims at drawing insightful knowledge from income dataset on over 12,000 clients responding to a variety of questions about their work activities, gender, origins and so on. We'll be using  various statistical and machine learning techniques throughout this project to  get the most out of our data.
 
-The notebook is available online with google colab : <a href="https://colab.research.google.com/drive/1z4xkXOPvoBFpTKPmZ3ekElxvQd3veJNm?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-<a href="https://ibb.co/hmpsJ30"><img src="https://i.ibb.co/LZ4SXVK/Income-Tax-for-Foreigners.jpg" alt="Income-Tax-for-Foreigners" border="0"></a>
 
 
 ## Quick Start
+
+Follow the instructions bellow to run the experiments
+
+You can also run them online with google's Colab service
+
+<a href="https://colab.research.google.com/drive/1z4xkXOPvoBFpTKPmZ3ekElxvQd3veJNm?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+
 
 ### Setting up your work environment(⚠ tested on windows 11 pro)
 
@@ -74,6 +82,7 @@ $ jupyter notebook
 ### Runtime 
 
 It may take a while to run all cells( roughly 30 ~ 40 mins) on 16Gb Memory machine
+
 The slowest parts of the code are undoubtedly:
 * points linkage in HCA clustering
 * Grid search for random forest
@@ -108,13 +117,14 @@ Our final pipeline for both feature engineering and prediction looks like this:
 
 <a href="https://ibb.co/HGXRyPg"><img src="https://i.ibb.co/p4nNTKX/model.png" alt="model" border="0"></a>
 
+In the final section on (**Error Analysis**) we challenge our model with new unseen data in order to evaluate our **generalization error**
 
 # Running this project using python image for Docker
 ## Prerequisites
 
 Follow the instructions on [Install Docker](https://docs.docker.com/engine/installation/)  in order to install docker container management system on your device or server. Check out also [Docker Desktop](https://www.docker.com/products/docker-desktop/) software which is also a very convinient tool I highly recommend to help you manage your containers with runtime statistics and easy management services
 
-Once you have installed docker, you can now move to project folder where the Dockerfile is located and the following command to build image from latest official python image in Docker hub:
+Once you have installed docker, you can now move to project folder where the Dockerfile is located and run the following command to build your image :
 
 ```bash
 $ docker build -t income_image .
