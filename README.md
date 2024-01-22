@@ -88,7 +88,7 @@ The slowest parts of the code are undoubtedly:
 * Grid search for random forest
 * TSNE on quantitative data
 
-# Getting hands on the notebook
+# Hands on the notebook
 
 The notebook **taxability.ipynb** will walk you through different kinds of analyses, it is divided into 6 main parts:
 * **Setting-up workspace**
