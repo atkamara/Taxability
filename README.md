@@ -7,8 +7,8 @@ Taxable income analysis
 
 # Exploratory and predictive experiments
 
-This project aims at drawing insightful knowledge from income dataset on over 12,000 clients responding to a variety of questions about their work activities, gender, origins and so on. We'll be using  various statistical and machine learning techniques throughout this project to  get the most out of our data.
 
+This project aims to derive deep insights from an income dataset of over 12,000 customers answering various questions about their professional activities, gender, backgrounds, etc. We will use various statistical and machine learning techniques throughout this project to get the most out of our data.
 
 
 
@@ -34,7 +34,7 @@ You should get the following project structure displayed on your favorite IDE(I'
 
 ### Creating a virtual environment :
 
-This part is optional but highly recommended if you want to avoid version conflic. Virtual environments are very useful tools, especially for data science as we collaborate a lot on a daily basis and we share codes from time to time. Setting up a virtual environment will help you make sure you can reproduce your experiments on any computer. For the purpose of this tutorial, we will be using the **virtualenv** library available on **pypi** and that you can easily download using **pip** command . Here are the instructions( if you don't have it already) to follow: 
+This part is optional but highly recommended if you want to avoid version conflicts. Virtual environments are very useful tools, especially for data science because we collaborate a lot on a daily basis and we share codes from time to time. Setting up a virtual environment will help ensure that you can replicate your experiments on any computer. For the purposes of this tutorial, we will use the **virtualenv** library available on **pypi** and which you can easily download using the **pip** command. Here are the instructions (if you don't already have them) to follow:
 
 ```bash
 $  pip install virtualenv
