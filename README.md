@@ -67,7 +67,7 @@ $ . mlenv/bin/activate
 
 ***⚠Do not miss the dot ( . ) at begining of the command***
 
-### Install python libraries
+### Installing python libraries
 
 Now that you have activated your virtual environment, you can install all the libraries you will need to run this experiment. If you look closer at your working directory, you will see at the root of the project a file named ***requirements.txt***. This file lists all python dependencies you'll need, you can install them all at once by using this single command:
 ```bash
@@ -141,7 +141,7 @@ $ docker run --name income_container -p 8888:8888 income_image
 ```
 
 You can now visit the localhost link displayed on the terminal with your access token
-
+You may want to add ```-v``` tag to your run command to persist data in a volume that you're local device will have in common with the container
 
 # FAQ
 
