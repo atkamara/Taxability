@@ -1,10 +1,13 @@
 
+
 Taxable income analysis
 ==========================
 
 # Exploratory and predictive analysis
 
 This project aims at drawing insightful knowledge from income dataset on over 12,000 clients responding to a variety of questions about their work activities, gender, origins and so on. We'll be using  various statistical and machine learning techniques throughout this project to  get the most out of our data.
+
+The notebook is available online with google colab : <a href="https://colab.research.google.com/drive/1z4xkXOPvoBFpTKPmZ3ekElxvQd3veJNm?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 <a href="https://ibb.co/hmpsJ30"><img src="https://i.ibb.co/LZ4SXVK/Income-Tax-for-Foreigners.jpg" alt="Income-Tax-for-Foreigners" border="0"></a>
 
@@ -62,10 +65,19 @@ Now that you have activated your virtual environment, you can install all the li
 ```bash
 $ pip install -r requirements.txt
 ```
+**Note**: this may take a while depending on the speed of your internet connection(approximately 10 mins on standard wifi network)
+
 Now you're set and ready to launch your notebook on localhost at port **8888** by default, run the following command:
 ```bash
 $ jupyter notebook
 ```
+### Runtime 
+
+It may take a while to run all cells( roughly 30 ~ 40 mins) on 16Gb Memory machine
+The slowest parts of the code are undoubtedly:
+* points linkage in HCA clustering
+* Grid search for random forest
+* TSNE on quantitative data
 
 # Getting hands on the notebook
 
@@ -94,15 +106,19 @@ $$\gamma=\frac{1}{3}accuracy+\frac{2}{3}specificity$$
 We have saved all our models in the **model/** directory with the pickle extension(**.pkl**) so that we will be able to reuse them at any time for prediction. 
 Our final pipeline for both feature engineering and prediction looks like this:
 
+<a href="https://ibb.co/HGXRyPg"><img src="https://i.ibb.co/p4nNTKX/model.png" alt="model" border="0"></a>
 
 
-# Want to run this project using a Docker image?
+# Running this project using python image for Docker
 ## Prerequisites
 
-Follow the instructions on [Install Docker](https://docs.docker.com/engine/installation/)  in order to install it on your device or server. The [Docker Desktop](https://www.docker.com/products/docker-desktop/) software is also a very convinient tool I highly recommend to help you manage your systems with runtime statistics and easy management services
+Follow the instructions on [Install Docker](https://docs.docker.com/engine/installation/)  in order to install docker container management system on your device or server. Check out also [Docker Desktop](https://www.docker.com/products/docker-desktop/) software which is also a very convinient tool I highly recommend to help you manage your containers with runtime statistics and easy management services
 
+Once you have installed docker, you can now move to project folder where the Dockerfile is located and the following command to build image from latest official python image in Docker hub:
 
-
+```bash
+$ docker build -t income_image .
+```
 
 
 # FAQ
