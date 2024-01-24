@@ -24,7 +24,7 @@ You can also run them online with google's Colab service
 
 ### Setting up your work environment(⚠ tested on windows 11 pro)
 
-You can download the project and run it locally on your computer by either pulling this repository or downloading it directly from this [link](https://codeload.github.com/atkamara/processdatabeez/zip/refs/heads/main) or github, you will only have to extract the zipped file on you working directory.
+You can download the project and run it locally on your computer by either pulling this repository or downloading it directly from this [link](https://codeload.github.com/atkamara/processdatabeez/zip/refs/heads/main) or github, you will only have to extract the zipped file on to your working directory.
 ```bash
     $ git clone https://github.com/atkamara/processdatabeez.git
 ```    
@@ -44,7 +44,7 @@ When then installation process is done, you can now create a virtual environment
 ```bash
 $ virtualenv -p python3 mlenv
 ```
-***Note that we are using python3 in this project***
+***Notice that we are using python3 in this project***
 	
 Now you can activate your virtual environment after that the necessary files have been properly installed. Run this command and you should see between brackets (mlenv) at the begining of your shell prompt:
 
@@ -53,7 +53,7 @@ for windows:
 ```bash
 $ . mlenv/Scripts/activate
 ```
-On windows 11, you may run into restriction issues. if so, you have to allow sript execution by using the following command(at your own risk) ```$ Set-ExecutionPolicy Unrestricted``` you can set it back to restricted mode by using the following command ```$  Set-ExecutionPolicy restricted``` you can also check you execution policy by using the command ```$  Get-ExecutionPolicy``` 
+On windows 11, you may run into restriction issues. if so, you have to allow script execution by using the following command(at your own risk) ```$ Set-ExecutionPolicy Unrestricted``` you can set it back to restricted mode by using the following command ```$  Set-ExecutionPolicy restricted``` you can also check your execution policy by using the command ```$  Get-ExecutionPolicy``` 
 
 Linux, Mac: 
 
@@ -75,7 +75,7 @@ $ pip install -r requirements.txt
 ```
 **Note**: this may take a while depending on the speed of your internet connection(approximately 10 mins on standard wifi network)
 
-Now you're set and ready to launch your notebook on localhost at port **8888** by default, run the following command:
+Now you're set and ready to launch jupyter notebook service on your localhost at port **8888** by default, run the following command:
 ```bash
 $ jupyter notebook
 ```
@@ -100,16 +100,16 @@ The notebook **taxability.ipynb** will walk you through different kinds of analy
 
 The two first sections are focused on preparing your data for analysis. They deal with missing values, preliminary data preparations and check for irrelevant data and choose the right features that can provide us with useful information about income taxability.
 
-The third section (**Getting insights from clients distributions**) is a very large one. It analyzes distributions on time and geographic scopes and will lays emphasis on pertinent qualitative variables.
+The third section (**Getting insights from clients distributions**) is a very large one. It analyzes distributions on time and geographic scopes and lays emphasis on pertinent qualitative variables.
 
-The section on (**Clustering clients**), uses various machine learning techniques to get insights from data. In terms of methodology, we found it more convenient on **Python** to seperate data into qualitative and quantitative sets. We are unfortunately unaware of implementations of algorithms that can deal with both qualitative and quantitative measures like [FAMD](https://rdrr.io/cran/FactoMineR/man/FAMD.html) which is only available on R software. Thus you will find in this section:
+The section on (**Clustering clients**), uses various machine learning techniques to get insights from data. In terms of methodology, we found it more convenient on **Python** to seperate data into qualitative and quantitative sets. Currently, we are unfortunately unaware of implementations of algorithms in python that can deal with both qualitative and quantitative measures like [FAMD](https://rdrr.io/cran/FactoMineR/man/FAMD.html) which is only available on R software. Thus you will find in this section:
 
 *  Dimensionality reduction(Pincipal component analysis, stochastic neighbour embedding(tSNE)) for quantitative variables like wage, capital gains and losses or year
-* Clustering using k-means, DBscan on quantitative data : you can preview clusters online at this [link](https://projector.tensorflow.org/?config=https://gist.githubusercontent.com/atkamara/af578844509b0402135f635734a1fbe9/raw/b5d93e71c4fcc25d41b3cb2b3d66410ea0d886a1/beez_config.json), you can enable cluster coloring by labels just as in picture below. On right panel you can compute distances between clients to see how close they are individually.
+* Clustering using k-means, DBscan on quantitative data : you can preview clusters online at this [link](https://projector.tensorflow.org/?config=https://gist.githubusercontent.com/atkamara/af578844509b0402135f635734a1fbe9/raw/b5d93e71c4fcc25d41b3cb2b3d66410ea0d886a1/beez_config.json), you can enable cluster coloring by labels just as in picture below. On the right panel you can compute distances between clients to see how close they relate individually.
 <a href="https://ibb.co/wybsB44"><img src="https://i.ibb.co/b1yJQXX/clust.png" alt="clust" border="0"></a><br /><br />
 
-* Hierarchical agglomerative classification(HAC) on qualitative data using Jaccard index
-* Clusters Labelling : we give names to our cluster based on more relevant variables
+* Hierarchical agglomerative classification(HAC) on qualitative data using Jaccard index of dissimilarities
+* Clusters Labelling : we give names to our clusters based on more relevant variables
 
 
 Finally, we dive into the most interesting part which is learning on data to predict the fact of not declaring taxable income. Since our sample data is unbalanced, accuracy is less relevant than statistical measures like specificity. That's why we came up with an evaluation strategy which favors specificity over accuracy defined as follows:
