@@ -102,7 +102,7 @@ The two first sections are focused on preparing your data for analysis. They dea
 
 The third section (**Getting insights from clients distributions**) is a very large one. It analyzes distributions on time and geographic scopes and will lays emphasis on pertinent qualitative variables.
 
-The section on (**Clustering clients**), uses various machine learning techniques to get insights from data. In terms of methodology, we found it more convinient on **Python** to seperate data into qualitative and quantitative sets. We are unfortunately unaware of implementations of algorithms that can deal with both qualitative and quantitative measures like [FAMD](https://rdrr.io/cran/FactoMineR/man/FAMD.html) which is only available on R software. Thus you will find in this section:
+The section on (**Clustering clients**), uses various machine learning techniques to get insights from data. In terms of methodology, we found it more convenient on **Python** to seperate data into qualitative and quantitative sets. We are unfortunately unaware of implementations of algorithms that can deal with both qualitative and quantitative measures like [FAMD](https://rdrr.io/cran/FactoMineR/man/FAMD.html) which is only available on R software. Thus you will find in this section:
 
 *  Dimensionality reduction(Pincipal component analysis, stochastic neighbour embedding(tSNE)) for quantitative variables like wage, capital gains and losses or year
 * Clustering using k-means, DBscan on quantitative data : you can preview clusters online at this [link](https://projector.tensorflow.org/?config=https://gist.githubusercontent.com/atkamara/af578844509b0402135f635734a1fbe9/raw/b5d93e71c4fcc25d41b3cb2b3d66410ea0d886a1/beez_config.json), you can enable cluster coloring by labels just as in picture below. On right panel you can compute distances between clients to see how close they are individually.
@@ -126,7 +126,7 @@ In the final section on (**Error Analysis**) we challenge our model on new unsee
 # Running this project using python image for Docker
 ## Prerequisites
 
-Follow the instructions on [Install Docker](https://docs.docker.com/engine/installation/)  in order to install docker container management system on your device or server. Check out also [Docker Desktop](https://www.docker.com/products/docker-desktop/) software which is a very convinient tool that I highly recommend to help you manage your containers.
+Follow the instructions on [Install Docker](https://docs.docker.com/engine/installation/)  in order to install docker container management system on your device or server. Check out also [Docker Desktop](https://www.docker.com/products/docker-desktop/) software which is a very convenient tool that I highly recommend to help you manage your containers.
 
 Once you have installed docker, you can now move to the project folder where the Dockerfile is located and run the following command to build your image:
 
