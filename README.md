@@ -53,7 +53,7 @@ for windows:
 ```bash
 $ . mlenv/Scripts/activate
 ```
-On windows 11, you may run into restriction issues. if so, you have to allow sript execution by using the following command(at your own risk) ```$ Set-ExecutionPolicy Unrestricted```
+On windows 11, you may run into restriction issues. if so, you have to allow sript execution by using the following command(at your own risk) ```$ Set-ExecutionPolicy Unrestricted``` you can set it back to restricted mode by using the following command ```$  Set-ExecutionPolicy restricted``` you can also check you execution policy by using the command ```$  Get-ExecutionPolicy``` 
 
 Linux, Mac: 
 
@@ -65,7 +65,7 @@ or
 $ . mlenv/bin/activate
 ```
 
-***⚠Do not miss the dot ( . ) at begining of the command***
+***⚠ Watch out not to miss the dot ( . ) at begining of the command***
 
 ### Installing python libraries
 
