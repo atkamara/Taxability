@@ -16,7 +16,7 @@ This project aims to derive deep insights from an income dataset of over 12,000 
 
 Follow the instructions bellow to run the experiments
 
-You can also run the code online by using google's Colab service or binder, click on links bellow to get access to respective services 
+You can also run the code online by using google's Colab service or binder, click on the links bellow to get access to those services 
 
 * <a href="https://colab.research.google.com/drive/1z4xkXOPvoBFpTKPmZ3ekElxvQd3veJNm?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 * [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/atkamara/processdatabeez/main?labpath=taxability.ipynb)
