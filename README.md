@@ -23,7 +23,7 @@ You can also run the code online by using google's Colab service or binder, clic
 
 ### Setting up your work environment(⚠ tested on windows 11 pro)
 
-You can download the project and run it locally on your computer by either pulling this repository or downloading it directly from this [link](https://codeload.github.com/atkamara/processdatabeez/zip/refs/heads/main) or github, you will only have to extract the zipped file on to your working directory.
+You can download the project and run it locally on your computer by either pulling this repository or downloading it directly from this [Download Link](https://codeload.github.com/atkamara/processdatabeez/zip/refs/heads/main) or github, you will only have to extract the zipped file on to your working directory.
 ```bash
     $ git clone https://github.com/atkamara/processdatabeez.git
 ```    
