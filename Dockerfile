@@ -15,7 +15,7 @@ RUN adduser --disabled-password \
 
 ENV HOME /home/analyst 
 
-RUN chown -R 1000 ${HOME}
+
 
 ###########################
 #                         # 
@@ -30,6 +30,10 @@ COPY . ${HOME}
 
 #Set working directory
 WORKDIR ${HOME}
+
+
+#Giving access to content 
+RUN chown -R 1000 ${HOME}/*
 
 #Switching to user analyst
 USER analyst
