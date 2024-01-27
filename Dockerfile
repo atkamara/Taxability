@@ -56,7 +56,7 @@ RUN python -m venv pyenv
 
 #You can now install libraries in pyenv
 
-RUN pip install -r requirements.txt --progress-bar off
+RUN pyenv/bin/pip install -r requirements.txt --progress-bar off
 
 
 ###########################
@@ -67,3 +67,7 @@ RUN pip install -r requirements.txt --progress-bar off
 # Task 1 : Change default shell from /bin/sh to /bin/bash in order to be able to use source command
 # Task 2 : Activate virtual environment
 # Task 3 : Launch jupyter notebook
+SHELL ["/bin/bash","-c"]
+
+CMD source pyenv/bin/activate && \
+	  jupyter notebook --ip 0.0.0.0 

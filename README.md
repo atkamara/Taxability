@@ -140,7 +140,7 @@ Once you have installed docker, you can now move to the project folder where the
 $ docker build -t income_image .
 ```
 
-This process may take a while since there is a lot of packages to install
+This process may take a while since there is a lot of packages to install(for example last build took me \~20mins)
 
 When the process is done, you can check if the image is correctly listed:
 ```bash
