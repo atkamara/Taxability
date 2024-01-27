@@ -66,6 +66,13 @@ $ . mlenv/bin/activate
 
 ***⚠ Watch out not to miss the dot ( . ) at begining of the command***
 
+Confirm that you are using mlenv
+
+```bash
+$ which python 
+```
+
+
 ### Installing python libraries
 
 Now that you have activated your virtual environment, you can install all the libraries you will need to run this experiment. If you look closer at your working directory, you will see at the root of the project a file named ***requirements.txt***. This file lists all python dependencies you'll need, you can install them all at once by using this single command:
