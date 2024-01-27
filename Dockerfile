@@ -56,7 +56,7 @@ RUN python -m venv pyenv
 
 #You can now install libraries in pyenv
 
-RUN pyenv/bin/pip install -r requirements.txt --progress-bar off
+RUN pip install -r requirements.txt --progress-bar off
 
 
 ###########################
