@@ -33,7 +33,7 @@ You should get the following project structure displayed on your favorite IDE(I'
 
 ### Creating a virtual environment :
 
-This part is optional but highly recommended if you want to avoid version conflicts. Virtual environments are very useful tools, especially for data science because we collaborate a lot on a daily basis and we share codes from time to time. Setting up a virtual environment will help ensure that you can replicate your experiments on any computer. For the purposes of this tutorial, we will use the **virtualenv** library available on **pypi** and which you can easily download using the **pip** command. Here are the instructions (if you don't already have them) to follow:
+This part is optional but highly recommended if you want to avoid version conflicts. Virtual environments are very useful tools, especially for data science because we collaborate a lot on a daily basis and we share codes from time to time. Setting up a virtual environment will help ensure that you can replicate your experiments on any computer. For the purpose of this tutorial, we will use the **virtualenv** library available on **pypi** and which you can easily download using the **pip** command. Here are the instructions (if you don't have it installed already) to follow:
 
 ```bash
 $  pip install virtualenv
@@ -43,7 +43,7 @@ When then installation process is done, you can now create a virtual environment
 ```bash
 $ virtualenv -p python3 mlenv
 ```
-***Notice that we are using python3 in this project***
+***Note that we are using python3 in this project***
 	
 Now you can activate your virtual environment after that the necessary files have been properly installed. Run this command and you should see between brackets (mlenv) at the begining of your shell prompt:
 
@@ -64,7 +64,7 @@ or
 $ . mlenv/bin/activate
 ```
 
-***⚠ Watch out not to miss the dot ( . ) at begining of the command***
+***⚠ The dot ( . ) at the begining is an essential part of the code; it's the same as using the source command in bash shell***
 
 Confirm that you are using mlenv
 
@@ -115,7 +115,7 @@ The section on (**Clustering clients**), uses various machine learning technique
 <a href="https://ibb.co/wybsB44"><img src="https://i.ibb.co/b1yJQXX/clust.png" alt="clust" border="0"></a><br /><br />
 
 * Hierarchical agglomerative classification(HAC) on qualitative data using Jaccard index of dissimilarities
-* Clusters Labelling : we give names to our clusters based on more relevant variables
+* Clusters Labelling : we give names to our clusters based on the most relevant variables
 
 
 Finally, we dive into the most interesting part which is learning on data to predict the fact of not declaring taxable income. Since our sample data is unbalanced, accuracy is less relevant than statistical measures like specificity. That's why we came up with an evaluation strategy which favors specificity over accuracy defined as follows:
@@ -123,7 +123,7 @@ $$\gamma=\frac{1}{3}accuracy+\frac{2}{3}specificity$$
 
 We have saved all our models in the **model/** directory with the pickle extension(**.pkl**) so that we will be able to reuse them at any time for predictions. 
 
-Our final pipeline for both feature engineering and prediction looks like this:
+Our final Decision Architecture for both feature engineering and prediction looks like this:
 
 <a href="https://ibb.co/HGXRyPg"><img src="https://i.ibb.co/p4nNTKX/model.png" alt="model" border="0"></a>
 
@@ -153,7 +153,8 @@ $ docker run --name income_container -p 8888:8888 income_image
 ```
 
 You can now visit the localhost link displayed on the terminal
-**Note** you can add the ```-v```  to persist your data in a volume that you're local device will have in common with the container
+
+**Note** you can add the ```-v```  to persist your data in a volume that your local device will have in common with the container
 
 # FAQ
 

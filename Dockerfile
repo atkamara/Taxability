@@ -6,8 +6,6 @@ FROM python:3.12
 #        USER            #
 #                        #
 ##########################
-ENV USER analyst
-ENV NB_UID 1000
 
 RUN adduser --disabled-password \
 	--uid 1000 \
@@ -45,7 +43,7 @@ USER analyst
 #                         #
 ###########################
 #Update pip
-#Progress bar causes bugs that's why we deactivated due to latence in internet speed
+#Progress bar causes bugs that's why we deactivated it due to latence in internet speed
 
 RUN pip install --upgrade pip --progress-bar off
 
@@ -68,9 +66,9 @@ RUN pyenv/bin/pip install -r requirements.txt --progress-bar off
 # Running process         #
 #                         #
 ###########################
-# Task 1 : Change default shell from /bin/sh to /bin/bash in order to be able to use source command
+# Task 1 : Change default shell from /bin/sh to most popular /bin/bash with more commands and thus we will be able to use source command
 # Task 2 : Activate virtual environment
-# Task 3 : Launch jupyter notebook
+# Task 3 : Launch jupyter notebook on ip 0.0.0.0 to enable mapping for Docker
 SHELL ["/bin/bash","-c"]
 
 CMD source pyenv/bin/activate && \
