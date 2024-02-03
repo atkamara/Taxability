@@ -43,7 +43,7 @@ USER analyst
 #                         #
 ###########################
 #Update pip
-#Progress bar causes bugs that's why we deactivated it due to latence in internet speed
+#Progress bar causes bugs that's why we deactivated it due to latence in ourinternet connetion
 
 RUN pip install --upgrade pip --progress-bar off
 
