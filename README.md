@@ -33,7 +33,7 @@ You should get the following project structure displayed on your favorite IDE(I'
 
 ### Creating a virtual environment :
 
-This part is optional but highly recommended if you want to avoid version conflicts. Virtual environments are very useful tools, especially for data science because we collaborate a lot on a daily basis and we share codes from time to time. Setting up a virtual environment will help ensure that you can replicate your experiments on any computer. For the purpose of this tutorial, we will use the **virtualenv** library available on **pypi** and which you can easily download using the **pip** command. Here are the instructions (if you don't have it installed already) to follow:
+This part is optional but highly recommended if you want to avoid version conflicts. Virtual environments are very useful tools, especially for data science because we collaborate a lot on a daily basis and we share codes from time to time. Setting up a virtual environment will help ensure that you can replicate your experiments on any computer. For the purpose of this tutorial, we will use the **virtualenv** library available on **pypi** and which you can easily download using the **pip** command. Here are the instructions to follow(if you don't have it installed already) :
 
 ```bash
 $  pip install virtualenv
