@@ -154,7 +154,7 @@ $ docker run --name income_container -p 8888:8888 income_image
 
 You can now visit the localhost link displayed on the terminal
 
-**Note** you can add the ```-v```  to persist your data in a volume that your local device will have in common with the container
+**Note** you can add the ```-v```  flag to persist your data in a volume that your local disk storage will have in common with the container. Thus all changes in your container will also occur in your local disk and you'll be able to retrieve from there your trained models.
 
 # FAQ
 
