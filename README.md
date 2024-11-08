@@ -18,8 +18,8 @@ Follow the instructions bellow to run the experiments
 
 You can also run the code online by using google's Colab service or binder, click on the links bellow to get access to those services 
 
-*<a href="https://colab.research.google.com/drive/1z4xkXOPvoBFpTKPmZ3ekElxvQd3veJNm?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>(⚠ temporarily unavailable)*
- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/atkamara/processdatabeez/main?labpath=taxability.ipynb)
+ *<a href="https://colab.research.google.com/drive/1z4xkXOPvoBFpTKPmZ3ekElxvQd3veJNm?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>(⚠ temporarily unavailable)*
+  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/atkamara/processdatabeez/main?labpath=taxability.ipynb)
 
 ### Setting up your work environment(⚠ tested on windows 11 pro)
 
